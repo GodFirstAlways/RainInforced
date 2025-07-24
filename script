@@ -2187,7 +2187,7 @@ local function ToggleFling(bool)
 			repeat
 				pcall(function()
 					RVelocity = GetRoot(plr).Velocity 
-					GetRoot(plr).Velocity = Vector3.new(math.random(-150,150),-25000,math.random(-150,150))
+					GetRoot(plr).Velocity = Vector3.new(math.random(-1500,1500),-250000,math.random(-1500,1500))
 					RunService.RenderStepped:wait()
 					GetRoot(plr).Velocity = RVelocity
 				end)
