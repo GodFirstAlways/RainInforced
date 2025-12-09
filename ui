@@ -1,0 +1,33 @@
+-- UI Module
+local UI = {}
+local Players = game:GetService("Players")
+local plr = Players.LocalPlayer
+
+-- Create main GUI
+local SysBroker = Instance.new("ScreenGui")
+SysBroker.Name = "SysBroker"
+SysBroker.Parent = game.CoreGui
+
+-- Create all UI elements
+local Background = Instance.new("ImageLabel")
+-- ... (all your UI creation code)
+
+-- Export UI elements
+UI.SysBroker = SysBroker
+UI.Background = Background
+UI.Buttons = {
+    Home_Section_Button = Home_Section_Button,
+    Game_Section_Button = Game_Section_Button,
+    -- ... all buttons
+}
+UI.Sections = {
+    SectionList = SectionList,
+    Home_Section = Home_Section,
+    -- ... all sections
+}
+UI.Inputs = {
+    WalkSpeed_Input = WalkSpeed_Input,
+    -- ... all inputs
+}
+
+return UI

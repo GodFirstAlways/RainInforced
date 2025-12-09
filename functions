@@ -1,0 +1,31 @@
+-- Functions Module
+local Functions = {}
+local Players = game:GetService("Players")
+local plr = Players.LocalPlayer
+
+Functions.RandomChar = function()
+    local length = math.random(1,5)
+    local array = {}
+    for i = 1, length do
+        array[i] = string.char(math.random(32, 126))
+    end
+    return table.concat(array)
+end
+
+Functions.ChangeToggleColor = function(Button)
+    local led = Button.Ticket_Asset
+    if led.ImageColor3 == Color3.fromRGB(255, 0, 0) then
+        led.ImageColor3 = Color3.fromRGB(0, 255, 0)
+    else
+        led.ImageColor3 = Color3.fromRGB(255, 0, 0)
+    end
+end
+
+Functions.GetPing = function()
+    return (game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue())/1000
+end
+
+-- Add ALL your other functions here...
+-- (Copy GetPlayer, GetCharacter, GetRoot, TeleportTO, etc.)
+
+return Functions
